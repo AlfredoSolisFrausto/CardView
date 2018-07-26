@@ -7,7 +7,9 @@ namespace PanCardViewSample.Views
 		public CarouselSampleEmbeddedView()
 		{
 			InitializeComponent();
-		}
+
+            this.BindingContext = new[] { "a", "b", "c", "a", "b", "c", "a", "b", "c" };
+        }
 
 		protected override void LayoutChildren(double x, double y, double width, double height)
 		{

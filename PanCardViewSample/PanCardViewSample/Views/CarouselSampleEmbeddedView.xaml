@@ -11,12 +11,28 @@
                                     <Frame>
                                         <Label Text="Page 1 Item 1" />
                                     </Frame>
-                                    <Frame>
-                                        <Label Text="Page 1 Item 2" />
-                                    </Frame>
-                                    <Frame>
-                                        <Label Text="Page 1 Item 3" />
-                                    </Frame>
+                                    <ListView
+                                        HasUnevenRows="True"
+                                        ItemsSource="{Binding .}"
+                                        RowHeight="40"
+                                        SeparatorVisibility="None">
+                                        <ListView.Header>
+                                            <Label
+                                                Text="Files uploaded"/>
+                                        </ListView.Header>
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <StackLayout
+                                                        Orientation="Horizontal">
+                                                        <Switch
+                                                            IsEnabled="True"
+                                                            HorizontalOptions="Center"/>
+                                                    </StackLayout>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
                                 </StackLayout>
                             </tv:TabItem.Content>
                         </tv:TabItem>
